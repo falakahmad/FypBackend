@@ -142,6 +142,10 @@ app.post("/translate", async (req, res) => {
     res.status(500).send("Error translating text");
   }
 });
+// Default route for testing deployment
+app.get("/", (req, res) => {
+  res.send("🚀 Backend API is running successfully! — Deployed by Falak Ahmad");
+});
 
 const PORT = process.env.PORT || 5005;
 
